@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <title>Vinícola</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<header>
+    <!--------------------------------------NavBar------------------------------------>
+    <div class = "navbar"> 
+        <div class = "nav-logo1"><a href = "pagina_inicial.html">LOGO</a></div>
+        <ul class="nav-links">
+            <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+            <li><a href="historia.html" class = "nav-txt">História</a></li>
+            <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+            <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+            <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+        </ul>
+        <div class="insta_btn">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+        <li><a href="historia.html" class = "nav-txt">História</a></li>
+        <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+        <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+        <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+    </div>
+    </header>
+
+<body>
+<!--JSNAVBAR-->
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
+<!--SLIDER DE IMAGENS-->
+<div class="texto-prod">
+    <h1>Nossos Produtos</h1>
+</div>
+
+<div class="slider-global">
+    <div class="slider">
+        <div class="slides"> <!--Aqui ficarão as imagens dos 'produtos'-->
+            <!--Radio Buttons (as bolinha)-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <!--Fim Radio Buttons (as bolinha)-->
+
+            <!--Slide images-->
+            <div class="slide first">
+                <img src="img/produtos/vinhos.png" alt="img1">
+                <p>Vinhos licorosos</p>
+            </div>
+
+            <div class="slide">
+                <img src="img/produtos/suco.png" alt="img2">
+                <p>Sucos orgânicos</p>
+            </div>
+
+            <div class="slide">
+                <img src="/img/produtos/suco.png" alt="img3">
+                <p>Vinhos tintos</p>
+            </div>
+
+            <div class="slide">
+                <img src="img/produtos/vinhoseco.png" alt="img4">
+                <p>Vinhos secos</p>
+            </div>
+
+            <div class="slide">
+                <img src="img/produtos/sucouva4real.png" alt="img5">
+                <p>Sucos orgânicos</p>
+            </div>
+
+            <!--Fim Slide images-->
+
+            <!--Navi auto (bolinha de navegação)-->
+
+            <div class="nav-auto">
+
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+        </div>
+
+        <div class="manual-nav">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!--------------------------------------Footer------------------------------------>
+<section class="footer">
+    <h2>ADEGA</h2>
+    <p>Endereço, s/n - Zona Rural, Pernambuco, 48900-000</p>
+    <p>Contato/Enoturismo: (12) 3456-7890</p>
+    <p>Todos os direitos reservados à ADEGA LTDA © 2023 - CNPJ: XX.XXX.XXX/XXXX-XX</p>
+  </section>
+
+
+<!---LINK DO JAVASCRIPT-->
+  <script src="script.js"></script>
+</body>

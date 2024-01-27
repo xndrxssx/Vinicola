@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <title>Vinícola</title>
+    <!--------------------------------------CSS------------------------------------>
+    <link rel="stylesheet" href="./pagina_inicial.css">
+</head>
+<body>
+    <header>
+        <!--------------------------------------NavBar------------------------------------>
+        <div class = "navbar"> 
+            <div class = "nav-logo1"><a href = "pagina_inicial.html"></a></div>
+            <ul class="nav-links">
+                <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+                <li><a href="historia.html" class = "nav-txt">História</a></li>
+                <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+                <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+                <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+            </ul>
+            <div class="insta_btn">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+            <li><a href="historia.html" class = "nav-txt">História</a></li>
+            <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+            <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+            <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+        </div>
+        </header>
+        <!--JSNAVBAR-->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+            toggleBtn.onclick = function(){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+        
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
+        <div class="container">
+            <div class="centered">
+                <div class="divider">
+                    <h1>Vinícola</h1>
+                    <div class="lineone"></div>
+                    <h3>Uma obra de arte na sua mesa...</h3>
+                </div>
+                
+            </div>
+        </div>
+
+    <!--------------------------------------Conheça------------------------------------>
+    <section class="conheca">
+        <style></style>
+        <div class="title">
+            <h1><a id="conheca">Conheça</a></h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./img/img_012.png" alt="">
+                <h4>PRODUÇÃO</h4>
+                <p>Venha conhecer nossa produção.</p>
+                <a href="producao.html" class="ctn">Aqui</a>
+            </div>
+            <div class="col">
+                <img src="./img/img_009.png" alt="">
+                <h4>NOSSA HISTÓRIA</h4>
+                <p>Conheça a jornada da Vinícola.</p>
+                <a href="historia.html" class="ctn">Aqui</a>
+            </div>
+        </div>
+    </section>
+<!--------------------------------------Video------------------------------------>
+<section class="organic">
+    <video autoplay muted loop id="background-video">
+        <source src="./img/vid_004.mp4" type="video/mp4">
+        <!-- Fallback para navegadores que não suportam vídeo -->
+        Seu navegador não suporta a reprodução de vídeo.
+    </video>
+    <div class="organic-content">
+        <h1>Única vinícola orgânica do Vale</h1>
+        <div class="line"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum laudantium voluptate molestiae eveniet aspernatur et repudiandae eaque quam beatae cum, eius molestias velit in! Tempore quidem ipsam aut libero cupiditate.</p>
+        <a href="contato.html" class="ctn">Visite-nos</a>
+    </div>
+</section>
+
+<!--------------------------------------Footer------------------------------------>
+<section class="footer">
+    <h2>ADEGA</h2>
+    <p>Endereço, s/n - Zona Rural, Pernambuco, 48900-000</p>
+    <p>Contato/Enoturismo: (12) 3456-7890</p>
+    <p>Todos os direitos reservados à ADEGA LTDA © 2023 - CNPJ: XX.XXX.XXX/XXXX-XX</p>
+  </section>
+ 
+</body>
+</html> 

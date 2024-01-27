@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <script src="script2.js"></script>
+    <link rel="icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="producao.css">
+    <title>Vinícola</title>
+</head>
+
+<body>
+  <header>
+    <!--------------------------------------NavBar------------------------------------>
+    <div class = "navbar"> 
+      <div class = "nav-logo1"><a href = "pagina_inicial.html">LOGO</a></div>
+      <ul class="nav-links">
+          <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+          <li><a href="historia.html" class = "nav-txt">História</a></li>
+          <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+          <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+          <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+      </ul>
+      <div class="insta_btn">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+  </div>
+    <div class="dropdown_menu">
+        <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+        <li><a href="historia.html" class = "nav-txt">História</a></li>
+        <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+        <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+        <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+    </div>
+    </header>
+    <!--JSNAVBAR-->
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+  
+      toggleBtn.onclick = function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+  
+          toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+      }
+  </script>
+
+    <div class="container">
+        <div class="centered">
+            <div class="divider">
+                <h1>Nossa Produção</h1>
+                <h3>Aqui é 100% orgânica, pensando no bem estar de seus trabalhadores,<br> na preservação do meio ambiente e em produtos mais saudáveis.</h3>
+            </div>
+            
+        </div>
+    </div>
+
+      <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="./img/img_033.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./img/img_034.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./img/img_029.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./img/img_022.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+
+  <article class="article">
+  <blockquote>
+    <p>"Apresentação, frase, citação da gestora..."  </p>
+    <cite><span class="cite-last-name"> Nome</span> Completo</cite>
+    <div class="blockquote-author-image" style="--img: url('F:\Meu Drive\PROJETO BIA\Vinícola\img\img_011.jpg')"></div>
+</blockquote>
+</article>
+
+<div class="question"><h1>Você sabe como o vinho é feito?</h1></div>
+
+<div class="timeline">
+    <div class="linha left">
+      <div class="content">
+        <h2>Colheita</h2>
+        <p>O momento ideal para a colheita é quando as uvas atingem o ponto de maturação ideal, que é determinado por fatores como clima, terroir e acidez. No Brasil, a colheita de uvas pode ocorrer em diferentes épocas do ano, dependendo da região. No Vale do São Francisco, por exemplo, é possível realizar duas ou três safras por ano, enquanto no sul do país, apenas uma.</p>
+        <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img src="./img/20231026_134149125_iOS.png" width="300" height="200">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="./img/20231026_131242185_iOS.png" width="300" height="200">
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="linha right">
+      <div class="content">
+        <h2>Extração</h2>
+        <p>O desengace consiste na separação das bagas (grão da uva) do engaço (esqueleto de sustentação do cacho) antes do esmagamento. São feitos, normalmente, por um só equipamento. Esta etapa minimiza futuros defeitos nos vinhos, observando que o engaço pode transferir amargor caso mantenha contato prolongado com mosto em fermentação, ou seja, esmagado durante o processamento. </p>
+        <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img src="./img/img_042.jpg" width="300" height="200">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="./img/img_039.jpg" width="300" height="200">
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="linha left">
+        <div class="content">
+            <h2>Maceração</h2>
+            <p>Em seguida as uvas selecionadas, passam pela etapa do esmagamento que 
+                por gerações foi um processo onde era realizados com os pés tradicionalmente. 
+                Com o passar dos anos o procedimento foi mecanizado e perdeu quase todo o 
+                contato humano.</p>
+                <video src="./img/vid_004.mp4" width="300" height="170" muted controls controlsList="nodownload" autoplay></video>
+          </div>
+      </div>
+      <div class="linha right">
+        <div class="content">
+          <h2>Fermentação</h2>
+          <p>Na fermentação quanto mais as uvas ficarem nos tanques, mais encorpada 
+            será a bebida. Nessa etapa há a adição de fungos para fazer a substituição e 
+            transformação do açúcar da fruta em álcool e gás carbônico. É a parte mais 
+            complexa e importante pois deve haver um controle rigoroso 
+            da temperatura dos tanques.</p>
+          <div class="img-comp-container">
+            <video src="./img/vid_005.mp4" width="300" height="170" muted controls controlsList="nodownload" autoplay></video>            
+          </div>
+        </div>
+      </div>
+      <div class="linha left">
+        <div class="content">
+          <h2>Transfega</h2>
+          <p>Quando o processo de fermentação termina, alguns resíduos sólidos — como polpa da fruta e leveduras — se depositam no fundo do tanque pela ação da própria gravidade. A separação do líquido de seus sedimentos, ao transportá-lo de um recipiente para outro é a transfega. A depender do tipo de vinho em produção, pode ser necessário trasfegá-lo muitas vezes.</p>
+          <img src="./img/img_043.jpg" alt="" class="content-img">
+        </div>
+      </div>
+      
+      <div class="linha right">
+        <div class="content">
+          <h2>Engarrafamento</h2>
+          <p>Após um período os vinhos são engarrafados e guardados na posição horizontal, para o contato com a rolha e o 
+            bloqueio da entrada do oxigênio, ocasionando a perda de sabor. Depois de engarrafados, os vinhos são mantidos em repouso na vinícola pelo tempo que for necessário, até estarem prontos para a comercialização.</p>
+            <img src="./img/gif_001.gif" alt="" class="content-img">
+        </div>
+      </div>
+       </div>
+<!--------------------------------------Footer------------------------------------>
+<section class="footer">
+  <h2>ADEGA</h2>
+  <p>Endereço, s/n - Zona Rural, Pernambuco, 48900-000</p>
+  <p>Contato/Enoturismo: (12) 3456-7890</p>
+  <p>Todos os direitos reservados à ADEGA LTDA © 2023 - CNPJ: XX.XXX.XXX/XXXX-XX</p>
+</section>
+
+<!---LINK DO JAVASCRIPT-->
+<script>
+    initComparisons();
+    </script>
+</body>

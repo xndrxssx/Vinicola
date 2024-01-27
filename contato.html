@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <title>Vinícola</title>
+    <link rel="icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="contato.css">
+</head>
+    
+
+<header>
+<!--------------------------------------NavBar------------------------------------>
+<div class = "navbar"> 
+    <div class = "nav-logo1"><a href = "pagina_inicial.html">LOGO</a></div>
+    <ul class="nav-links">
+        <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+        <li><a href="historia.html" class = "nav-txt">História</a></li>
+        <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+        <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+        <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+    </ul>
+    <div class="insta_btn">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+<div class="dropdown_menu">
+    <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+    <li><a href="historia.html" class = "nav-txt">História</a></li>
+    <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+    <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+    <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+</div>
+</header>
+
+<body>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+
+    <div class="contato">
+        <div class="caixa">
+            <div class="contato form">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Primeiro nome</span>
+                                <input type="text" placeholder="John" id="nome">
+                            </div>
+                            <div class="inputBox">
+                                <span>Último nome</span>
+                                <input type="text" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>E-mail</span>
+                                <input type="text" placeholder="johndoe123@gmail.com" id="email">
+                            </div>
+                            <div class="inputBox">
+                                <span>Contato</span>
+                                <input id="contato" type="text" placeholder="87 12345 6789">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Mensagem</span>
+                                <textarea id="msg" placeholder="Digite sua mensagem aqui..."></textarea>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contato info">
+                <p>Endereço, s/n - Zona Rural, Pernambuco, 56395-000</p>
+                <div class="whatsapp">
+                        <p>Contato/Enoturismo: <img src="./img/1384023.png" width="20" alt="Fale conosco" title="Fale conosco"/> </a>(12) 3456-7890</p>
+                    </div>
+                </p>
+                <p>E-mail: email@gmail.com</p>
+                <p>Todos os direitos reservados à ADEGA © 2023 - CNPJ: XX.XXX.XXX/XXXX-XX</p>
+            </div>
+            <div class="contato map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.1888290734023!2d-40.0577178!3d-9.046533499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x774b5d367e4eb4b%3A0xba6f799b11d760e9!2sADEGA%20BIANCHETTI%20TEDESCO%20-%20VIN%C3%8DCOLA%20ORG%C3%82NICA%20NO%20VALE%20DO%20S%C3%83O%20FRANCISCO-PE!5e0!3m2!1spt-BR!2sbr!4v1692931810394!5m2!1spt-BR!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!--------------------------Script do gmail------------------------------->
+    <!--tutorial: https://youtu.be/sGQSz22U8VM -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "email da empresa",
+                Password : "password",
+                To : 'email da empresa',
+                From : document.getElementById("email").value,
+                Subject : "Novo contato",
+                Body : "Name: " + document.getElementById("nome").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Contato: " + document.getElementById("contato").value
+                    + "<br> Mensagem: " + document.getElementById("msg").value 
+            }).then(
+            message => alert("Enviado com sucesso")
+            );
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="historia.css">
+    <title>Vinícola</title>
+</head>
+
+<body>
+  <header>
+    <!--------------------------------------NavBar------------------------------------>
+    <div class = "navbar"> 
+      <div class = "nav-logo1"><a href = "pagina_inicial.html">LOGO</a></div>
+      <ul class="nav-links">
+          <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+          <li><a href="historia.html" class = "nav-txt">História</a></li>
+          <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+          <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+          <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+      </ul>
+      <div class="insta_btn">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+  </div>
+    <div class="dropdown_menu">
+        <li><a href = "pagina_inicial.html" class = "nav-txt">Home</a></li>
+        <li><a href="historia.html" class = "nav-txt">História</a></li>
+        <li><a href="producao.html" class = "nav-txt">Produção</a></li>
+        <li><a href = "produtos.html" class = "nav-txt">Produtos</a></li>
+        <li><a href = "contato.html" class = "nav-txt">Contato</a></li>
+    </div>
+    </header>
+    <!--JSNAVBAR-->
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+  
+      toggleBtn.onclick = function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+  
+          toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+      }
+  </script>
+    <div class="grid-container">
+        <div class="header"><h3>Quem somos?</h3></div>
+
+        <div class="left">
+            <img class="left-img" src="./img/img_005.jpg" alt="">
+        </div>
+        <div class="middle">
+            <p>História, como tudo se iniciou...</p>
+        </div>
+        <div class="right">
+            <img class="right-img" src="./img/img_007.jpg" alt="">
+        </div>
+
+    </div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+    <div class="column">
+      <div class="content">
+        <img src="./img/img_006.jpg" alt="img1" style="width:100%">
+        <h3>titulo</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae doloremque at impedit, voluptas asperiores mollitia ea dolore iure, repellat et unde officiis quasi assumenda nisi sequi a omnis hic maxime!</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./img/img_007.jpg" alt="img2" style="width:100%">
+        <h3>titulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque accusantium tempora. Dolor architecto, error tenetur est atque laborum, facere, impedit asperiores quisquam suscipit possimus. Natus reiciendis dignissimos cumque molestias. </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./img/img_005.jpg" alt="img3" style="width:100%">
+        <h3>titulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla veniam nam hic vero ducimus laboriosam quod doloremque quasi repellendus, placeat illo, illum consectetur accusantium ea, laudantium autem quidem eum.</p>
+      </div>
+    </div>
+</div>
+
+    <div class="video">
+        <div class="video-inner"></div>
+        <video src="./img/vid_005.mp4" width="690" height="390" muted controls controlsList="nodownload" autoplay></video>
+        </div>
+
+<!--------------------------------------Footer------------------------------------>
+<section class="footer">
+  <h2>ADEGA</h2>
+  <p>Endereço, s/n - Zona Rural, Pernambuco, 48900-000</p>
+  <p>Contato/Enoturismo: (12) 3456-7890</p>
+  <p>Todos os direitos reservados à ADEGA LTDA © 2023 - CNPJ: XX.XXX.XXX/XXXX-XX</p>
+</section>
+    
+    
+
+</body>
+</html>

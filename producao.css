@@ -1,0 +1,760 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@import url('https://fonts.google.com/specimen/Playfair+Display?preview.text=Bianchetti&preview.text_type=custom');
+
+@import url('https://fonts.google.com/specimen/Quicksand?preview.text=Bianchetti&preview.text_type=custom');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Great+Vibes&family=Imperial+Script&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400;500;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn:ital,wght@0,600;1,500&display=swap');
+
+/* font-family: 'Birthstone', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Imperial Script', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+body{
+    background-color: #edffef;
+    overflow-x: hidden; /* Para evitar barras de rolagem horizontais */
+	font-family: var(--type-body);
+	color: hsl(0 0% 15%);
+    margin: 0;
+}
+
+/*------------------------------NAVBAR------------------------------*/
+
+/* == NAVBAR ==*/
+.navbar {
+  position:fixed;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 105px; 
+  color:whitesmoke;
+  background-color: #570D33; 
+  filter: alpha(opacity=50);
+  align-items: center;
+  z-index: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav-txt {
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
+.nav-txt:hover {
+  color: #D3AB6B;
+}
+.nav-logo1{
+  max-width: 100%;
+  
+}
+
+.nav-logo1 img{
+  margin-top: 5px;
+  margin-bottom: 25px;
+  width: 274px;
+  margin-left: 10px;
+
+}
+
+/* .nav-logo a {
+  color: whitesmoke;
+  font-weight:lighter;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.0rem;
+} */
+
+
+/* .nav-logo a:hover {
+  color: #D3AB6B;
+} */
+
+.nav-links {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.nav-links li {
+  margin: auto 20px;
+}
+
+.navbar .toggle_btn {
+  color: #D3AB6B;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .toggle_btn:hover {
+  color: #D3AB6B;
+}
+
+.navbar .insta_btn a {
+  font-size: 1.5rem;
+  padding: 8px;
+  justify-content: space-between;
+  color: whitesmoke;
+  font-size: 2.2rem;
+}
+
+.navbar .insta_btn:hover {
+  color:#D3AB6B;
+  scale: 1.05;
+}
+
+.insta_btn:hover a {
+  color: #D3AB6B;
+}
+
+.insta_btn:active {
+  scale: 0.95;
+}
+/*DROPDOWN MENU*/
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 200px;
+  background: #570d33a8;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+.dropdown_menu.open{
+  height: 230px;
+}
+
+.dropdown_menu li{
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*PARTE RESPONSIVA DA NAVBAR*/
+@media(max-width: 992px) {
+  .navbar .nav-links
+  /* .navbar .insta_btn  */
+  {
+      display: none;
+  }
+
+  .navbar .toggle_btn {
+      display: block;
+  }
+
+  .dropdown_menu{
+      display: block;
+  }
+
+}
+@media(max-width: 576px){
+  .dropdown_menu{
+      left: 2rem;
+      width: unset;
+  }
+  .navbar .nav-links
+  /* .navbar .insta_btn */
+  { 
+      display: none;
+  }
+
+}
+
+.navbar ul ul {
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  width: 150px;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+.navbar li {
+  padding: 5px;
+  /* margin-top: 18px;
+  margin-bottom: 25px;
+  margin-left: 10px; */
+}
+
+.navbar ul li:hover ul {
+  position: absolute;
+  display: block;
+  
+}
+
+.navbar ul ul li a {
+  display: block;
+  color: whitesmoke;
+}
+
+.navbar ul ul li a:hover {
+  display: block;
+  color: #D3AB6B;
+}
+/*------------------------------FIM NAVBAR------------------------------*/
+/*---------------------------Primeira parte-----------------------------*/
+/* Container holding the image and the text */
+.container {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Adjust width as needed */
+  height: 90vh;
+  background-image: linear-gradient(to bottom, #e4aec37c, #b3517662),url(./img/img_035.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+/* Centered text */
+.centered {
+  position: relative;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  padding-left: 50px;
+text-align: center;
+}
+.container h3{
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    color: #edffef;
+    margin-left: 50px;
+}
+.divider h1{
+  margin-left: 50px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #edffef;
+    font-weight: 600;
+    padding-top: 200px;
+    margin-bottom: 0;
+  }
+/* .divider{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+.row-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px; /* Defina a largura máxima desejada */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.row img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+.row > .column {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(107, 14, 50, 0.2), 0 6px 20px 0 rgba(122, 22, 69, 0.445);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .row > .column {
+    width: 50%; /* Colunas empilhadas em pares */
+  }
+}
+
+
+/*-------------------------quote----------------------*/
+:root {
+	--type-body: Open Sans, Helvetica, Arial, sans-serif;
+	--type-quote: Vollkorn;
+	--quote-image-width: 140px;
+	--border-rad: 7px;
+	--accent-color: #641232;
+	--quote-bg: hsl(0 0% 97%);
+}
+
+.article {
+	max-width: 900px;
+	margin-top: 60px;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+blockquote {
+	position: relative;
+	padding: 1.0em 2.0em .5em calc(1.0em + var(--quote-image-width));
+	font: italic 1.2rem var(--type-quote);
+	background: var(--quote-bg) no-repeat left / var(--quote-image-width);
+	border-radius: var(--border-rad);
+	border: 2px solid white;
+	box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
+	text-indent: 1.6em;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+  blockquote {
+    padding: 0.8em 1.5em .3em calc(0.8em + var(--quote-image-width));
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 460px){
+  blockquote {
+    padding: 0.6em 1.0em .2em calc(0.6em + var(--quote-image-width));
+    font-size: 0.8rem;
+  }
+}
+
+blockquote::before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: var(--border-rad);
+	box-shadow:
+		inset -2px -2px 1px hsl(0 0% 100%),
+		inset 2px 2px 4px hsl(0 0% 0% / 20%);
+}
+
+blockquote::after {
+	content: "❝";
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: -2px;
+	transform: translate(-50%, -50%);
+	width: 1.3em;
+	height: 1.3em;
+	background: white;
+	box-shadow: 0 4px 5px -1px hsla(0 0% 0% / 20%);
+	border-radius: 999px;
+	display: grid;
+	place-content: center;
+	padding-top: .5em;
+	color: var(--accent-color);
+	font-size: 36px;
+	font-style: normal;
+	text-indent: 0;
+}
+
+.blockquote-author-image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: var(--quote-image-width);
+	height: 100%;
+	background:url('./img/img_027.jpg') no-repeat center / cover;
+    background-position: 31% 100%;
+	border-top-left-radius: var(--border-rad);
+	border-bottom-left-radius: var(--border-rad);
+}
+
+cite {
+	display: block;
+	margin-top: 30px;
+	text-indent: 0;
+	text-align: center;
+	font: bold .9rem var(--type-body);
+	text-transform: uppercase;
+	color: hsl(0 0% 20%);
+}
+
+@media (min-width: 768px) {
+	cite {
+    align-items: center;
+    display: block;
+		margin-left: auto;
+    margin-right: auto
+	}
+}
+
+.cite-last-name {
+	background: var(--accent-color);
+	color: var(--quote-bg);
+}
+/*PRODUÇÃO*/
+.question{
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    height: 190px;
+    background-image: url('./img/img_006.jpg');
+    background-size: cover;
+    background-position: 31% 40%;
+    display: flex; /* Use flexbox para alinhar verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.question h1{
+    font-size: 50px;
+    text-shadow: 2px 3px 4px #000000;
+    color: #edffef;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 800;
+
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100vw;
+    z-index: 0;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #526e55;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color:#edffef;
+    ;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+.linha {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+.linha::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #edffef;
+    border: 4px solid #ffcd7e;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+.left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+.right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #d6e6d8;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #d6e6d8;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #d6e6d8;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #d6e6d8 transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+.content {
+    padding: 10px 20px;
+    background-color: #d6e6d8;
+    position: relative;
+    border-radius: 6px;
+    overflow-x: hidden;
+  }
+.content h2{
+    margin-top: 5px;
+    font-size: 28px;
+    color: #641232;
+    font-family: 'Playfair Display', serif;
+
+}
+.content p{
+    margin-top: 5px;
+    color: #3b0923;
+    text-align: justify;
+}
+.content video{
+  z-index: 1;
+}
+.content-img{
+    margin-top: 10px;
+    border-radius: 20px;
+    max-width: 300px;
+    max-height: 200px;
+    height: auto;
+    width: 100%; /* Redimensione para a largura da coluna */
+    display: block;
+    margin: 10px auto;
+    overflow: hidden;
+    object-fit: cover;
+}
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 900px){
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+.container{
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  display: flex;
+  background-size: cover;
+}
+.divider h1{
+  margin-left: 10px;
+}
+.divider h3{
+  margin-left: 10px;
+}
+  .linha{
+    width: 100%;
+  }
+
+  .left::before, .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #d6e6d8;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #d6e6d8 transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+
+
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::after {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+.img-comp-container {
+  width: 300px;
+  position: relative;
+  height: 200px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.img-comp-img {
+  position: absolute;
+  overflow: hidden;
+  max-width: auto;
+  height:max-content;
+  margin: 0 auto;
+  }
+  
+.img-comp-img img {
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  
+  }
+  
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+  }
+
+  /*------------------------------FOOTER------------------------------*/
+
+.footer{
+    margin-top: 40px;
+    width: 95vw;
+    height: 200px;
+    text-align: center;
+    color: #570D33;
+}
+.footer h2{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+}
+.footer p{
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
